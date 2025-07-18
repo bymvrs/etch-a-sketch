@@ -6,6 +6,10 @@ for (let i = 0; i < 256; i++){
     div.style.width = `${600/16}px`;
     div.style.height = `${600/16}px`;
     div.style.border = "1px solid black";
-    
+
+    div.addEventListener("mouseenter", () => {
+        div.style.backgroundColor = "lightgreen";
+    })
+
     container.appendChild(div);
 }
