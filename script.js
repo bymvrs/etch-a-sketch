@@ -9,7 +9,7 @@ button.addEventListener("click", () => {
 
   do {
     squaresPerSide = +prompt("How many squares per side should the grid have? (Max. 100)");
-  } while (squaresPerSide == "" || squaresPerSide > 100);
+  } while (!Number.isInteger(squaresPerSide) || squaresPerSide > 100 || squaresPerSide <= 0);
 
   createGrid(squaresPerSide);
 });
