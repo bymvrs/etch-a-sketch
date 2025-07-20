@@ -22,7 +22,7 @@ function createGrid(squaresPerSide = 16) {
 
     div.style.width = `${GRID_WIDTH/squaresPerSide}px`;
     div.style.height = `${GRID_WIDTH/squaresPerSide}px`;
-    div.style.border = squaresPerSide < 50 ? "1px solid darkslateblue" : "1px solid lavender"
+    div.style.border = "1px solid " + (squaresPerSide < 30 ? "darkslateblue" : "ghostwhite");
 
     div.addEventListener("mouseenter", () => {
       div.style.backgroundColor = generateRandomColor();
