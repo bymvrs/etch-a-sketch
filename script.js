@@ -25,11 +25,15 @@ function createGrid(squaresPerSide = 16) {
     div.style.border = squaresPerSide < 50 ? "1px solid darkslateblue" : "1px solid lavender"
 
     div.addEventListener("mouseenter", () => {
-      div.style.backgroundColor = "lightgreen";
+      div.style.backgroundColor = generateRandomColor();
     });
 
     container.appendChild(div);
   }
+}
+
+function generateRandomColor(){
+  return `hsl(${Math.floor(Math.random() * 360) + 1} 100% 80%)`;
 }
 
 createGrid();
